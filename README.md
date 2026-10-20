@@ -65,6 +65,7 @@ To run or preview this project locally:
 
 - [x] Initial repository setup & GitHub initialization
 - [x] Baseline starter page & modern design system
+- [x] Interactive navbar scroll state & back-to-top navigation
 - [ ] Refine Hero section with dynamic headline & call to action
 - [ ] Add interactive Projects showcase with live preview links
 - [ ] Add Skills matrix & badges

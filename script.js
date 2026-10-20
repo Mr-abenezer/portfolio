@@ -21,6 +21,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Dynamic navbar state on scroll
+  const navbar = document.querySelector('.navbar');
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+
+    if (navbar) {
+      if (scrollPos > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    if (backToTopBtn) {
+      if (scrollPos > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+  });
+
+  // Back to top click handler
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   // Welcome console message
   console.log(
     '%c Welcome to Abenezer Teshome\'s Portfolio! %c\nExplore the code and connect at https://github.com/Mr-abenezer',
